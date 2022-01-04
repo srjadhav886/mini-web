@@ -2,6 +2,15 @@ import './App.css'
 export default function Instagram() {
   return (
     <>
+      <Navbar></Navbar>
+    </>
+
+  );
+}
+
+function Navbar() {
+  return (
+    <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">AMAZE TV</a>
@@ -40,8 +49,6 @@ export default function Instagram() {
           <input type="text" className="form-control form-control-lg" placeholder="Address" aria-label="Address" />
         </div>
       </div>
-
     </>
-
   );
 }
