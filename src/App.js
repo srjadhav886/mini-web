@@ -1,4 +1,5 @@
 import './App.css'
+import { useState } from "react";
 export default function Instagram() {
   return (
     <>
@@ -9,6 +10,29 @@ export default function Instagram() {
 }
 
 function Navbar() {
+
+  let [msg, setMsg] = useState("");
+
+  const changeMessage = (e) => {
+    setMsg(e.target.value);
+  };
+
+  let [msg1, setMsg1] = useState("");
+
+  const changeMessage1 = (e) => {
+    setMsg1(e.target.value);
+  };
+  let [msg2, setMsg2] = useState("");
+
+  const changeMessage2 = (e) => {
+    setMsg2(e.target.value);
+  };
+  let [msg3, setMsg3] = useState("");
+
+  const changeMessage3 = (e) => {
+    setMsg3(e.target.value);
+  };
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -35,20 +59,31 @@ function Navbar() {
       </nav>
       <div className="row mt-5">
         <div className="col">
-          <input type="text" className="form-control" placeholder="First name" aria-label="First name" />
+          <input type="text" className="form-control" placeholder="First name" aria-label="First name" value={msg} onChange={changeMessage} />
         </div>
         <div className="col">
-          <input type="text" className="form-control" placeholder="Middle name" aria-label="Middle name" />
+          <input type="text" className="form-control" placeholder="Middle name" aria-label="Middle name" value={msg1} onChange={changeMessage1} />
         </div>
         <div className="col">
-          <input type="text" className="form-control" placeholder="Last name" aria-label="Last name" />
+          <input type="text" className="form-control" placeholder="Last name" aria-label="Last name" value={msg2} onChange={changeMessage2} />
         </div>
       </div>
       <div className="row mt-5">
         <div className="col-6 ">
-          <input type="text" className="form-control form-control-lg" placeholder="Address" aria-label="Address" />
+          <input type="text" className="form-control form-control-lg" placeholder="Address" aria-label="Address" value={msg3} onChange={changeMessage3} />
         </div>
       </div>
+
+
+
+      <div className='col mt-5 d-flex ' >
+
+        <div className="p-2">    Full Name :   {msg2}</div>    <div className="p-2" >{msg} </div>    <div className="p-2">{msg2} </div>
+
+
+      </div>
+
+      <div className=''>Address : {msg3}</div>
     </>
   );
 }
