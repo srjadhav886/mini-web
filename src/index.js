@@ -3,17 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Instagram from './Sach';
+import Appl from './Red';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 ReactDOM.render(
   <React.StrictMode>
 
-    <Instagram />
+    <Appl />
   </React.StrictMode>,
-  <React.StrictMode>
 
-    <Instagram />
-  </React.StrictMode>,
 
 
   document.getElementById('root')

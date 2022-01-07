@@ -6,3 +6,9 @@
   font-size: xx-large;
   font-weight: bold;
 }
+
+.App{
+
+  justify-content: center;
+  align-items: center;
+}
